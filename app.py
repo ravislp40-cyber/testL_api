@@ -14,7 +14,7 @@ def posts():
     data = requests.get(POSTS_API).json()
     return jsonify({
         "data":response.json(),
-        "status":"successful message",
+        "status":"successful message update",
         "status_code":200
     })
 
