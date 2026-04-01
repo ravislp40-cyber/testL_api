@@ -12,7 +12,11 @@ ALBUMS_API = "https://jsonplaceholder.typicode.com/albums"
 @app.route('/posts')
 def posts():
     data = requests.get(POSTS_API).json()
-    return jsonify(data)
+    return jsonify({
+        "data":response.json(),
+        "status":"successful message",
+        "status_code":200
+    })
 
 
 # Comments JSON
